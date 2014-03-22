@@ -1,0 +1,13 @@
+[ 4, "2DD7D58B-3EA8-44B4-BB1B-C50213726233", 4, 1395268448, "866032", 1395268448, "866032", "{\n}", "19101051692", "Alpha Zeta Chapter House Association", "300 Robinson Law Center", "2865 S Colorado Blvd.", "Denver", "CO", "80222", "US", null, null, null, null, null, null, "Good Standing", null, null, "DNC", "William", "F.", "Robinson", "III", null, "4105 E Girard Avenue", null, "Denver", "CO", "80222", "US", null, null, null, null, null, null, "1910-03-04T00:00:00" ]
+,
+
+[ 5, "D44C918A-B17C-4B97-B57C-C5C8916BCB58", 5, 1395268448, "866032", 1395268448, "866032", "{\n}", "19111054652", "The Monitor Ditch Company", "38810 Hwy 133", null, "Hotchkiss", "CO", "81419", "US", "P.O. Box 1552", null, "Paonia", "CO", "81428", "US", "Good Standing", null, null, "DNC", "Laura", "M", "Major", null, null, "38810 Hwy 133", null, "Hotchkiss", "CO", "81419", "US", "P.O. Box 1552", null, "Paonia", "CO", "81428", "US", "1911-06-24T00:00:00" ]
+,
+
+[ 13, "30102936-B604-40AE-85D6-56E4011B1C53", 13, 1395268448, "866032", 1395268448, "866032", "{\n}", "19491116218", "Morgan Game and Fish Conservation Club", "427 S. Lake Street", null, "Fort Morgan", "CO", "80701", "US", "PO Box 1175", null, "Fort Morgan", "CO", "80701", "US", "Good Standing", null, null, "DNC", "Jane", null, "Larsen", null, null, "427 S. Lake Street", null, "Fort Morgan", "CO", "80701", "US", "PO Box 1175", null, "Fort Morgan", "CO", "80701", "US", "1949-03-11T00:00:00" ]
+, 
+
+[ 15, "7BA7A5AE-B09D-4418-B545-65468B8785B0", 15, 1395268448, "866032", 1395268448, "866032", "{\n}", "19491116612", "PROWERS COUNTY FARM BUREAU", "313 South Fifth", null, "Lamar", "CO", "81052", "US", "P.O. Box 796", null, "Lamar", "CO", "81052", "US", "Good Standing", null, null, "DNC", "Chris", null, "Rundell", null, null, "313 South Fifth", null, "Lamar", "CO", "81052", "US", "P,O, Box 796", null, "Lamar", "CO", "81052", "US", "1949-05-16T00:00:00" ]
+,
+
+[ 16, "A5E7D467-B6DC-420A-A361-F8520BE74999", 16, 1395268448, "866032", 1395268448, "866032", "{\n}", "19491117281", "THE DELTA COUNTY FARM AND LIVESTOCK BUREAU", "322 W. 5th St.", null, "Delta", "CO", "81416", "US", null, null, null, null, null, null, "Good Standing", null, null, "DNC", null, null, null, null, "The Delta County Farm and Livestock Bureau", "322 W. 5th St.", null, "Delta", "CO", "81416", "US", null, null, null, null, null, null, "1949-10-30T00:00:00" ]
