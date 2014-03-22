@@ -1,0 +1,1109 @@
+// CSS Reset
+@import "../../../media/jui/less/reset.less";
+
+// Core variables and mixins
+@import "variables.less"; // Custom for this template
+@import "../../../media/jui/less/mixins.less";
+
+// Grid system and page structure
+@import "../../../media/jui/less/scaffolding.less";
+@import "../../../media/jui/less/grid.less";
+@import "../../../media/jui/less/layouts.less";
+
+// Base CSS
+@import "../../../media/jui/less/type.less";
+@import "../../../media/jui/less/code.less";
+@import "../../../media/jui/less/forms.less";
+@import "../../../media/jui/less/tables.less";
+
+// Components: common
+// @import "../../../media/jui/less/sprites.less";
+@import "../../../media/jui/less/dropdowns.less";
+@import "../../../media/jui/less/wells.less";
+@import "../../../media/jui/less/component-animations.less";
+@import "../../../media/jui/less/close.less";
+
+// Components: Buttons & Alerts
+@import "../../../media/jui/less/buttons.less";
+@import "../../../media/jui/less/button-groups.less";
+@import "../../../media/jui/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "../../../media/jui/less/navs.less";
+@import "../../../media/jui/less/navbar.less";
+@import "../../../media/jui/less/breadcrumbs.less";
+@import "../../../media/jui/less/pagination.less";
+@import "../../../media/jui/less/pager.less";
+
+// Components: Popovers
+@import "../../../media/jui/less/modals.less";
+@import "../../../media/jui/less/modals.joomla.less";
+@import "../../../media/jui/less/tooltip.less";
+@import "../../../media/jui/less/popovers.less";
+
+// Components: Misc
+@import "../../../media/jui/less/thumbnails.less";
+@import "../../../media/jui/less/labels-badges.less";
+@import "../../../media/jui/less/progress-bars.less";
+@import "../../../media/jui/less/accordion.less";
+@import "../../../media/jui/less/carousel.less";
+@import "../../../media/jui/less/hero-unit.less";
+@import "../../../media/jui/less/media.less";
+
+// Utility classes
+@import "../../../media/jui/less/utilities.less";
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "../../../media/jui/less/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Phones to portrait tablets and narrow desktops
+@import "../../../media/jui/less/responsive-767px-max.less";
+@import "../../../media/jui/less/responsive-767px-max.joomla.less";
+
+// Tablets to regular desktops
+@import "../../../media/jui/less/responsive-768px-979px.less";
+
+// Large desktops
+@import "../../../media/jui/less/responsive-1200px-min.less";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "../../../media/jui/less/responsive-navbar.less";
+
+// Extended for JUI
+@import "../../../media/jui/less/bootstrap-extended.less"; // Has to be last to override when necessary
+
+// Icon Font
+@import "icomoon.less";
+
+
+/* =================== CUSTOMIZATION ========================  */
+html {
+
+}
+body  {
+	background: @bodyBackground;
+}
+h1 {
+  font-size: 24px;
+  line-height: 30px;
+}
+h2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+h3 {
+  font-size: 16px;
+  line-height: 20px;
+}
+h4 {
+  font-size: 14px;
+  line-height: 18px;
+}
+h5 {
+  font-size: 13px;
+  line-height: 17px;
+}
+h6 {
+  font-size: 12px;
+  line-height: 16px;
+}
+#logo h2 {
+  line-height: 1.1;
+	font-size: 36px;
+	font-family: "Arial Black", Georgia, serif;
+	font-weight: normal;
+	letter-spacing: 0px;
+	margin: 10px 0 0 0px;
+	padding: 0;
+	color: @black;
+}
+#logo h3 {
+	font-size: 11px;
+	font-family: 'Century Gothic', Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 1px;
+	margin: -2px 0 0 0px;
+	padding: 0;
+	color: @black;
+}
+#logo a:link, #logo a:visited, #logo a:hover, #logo a:active {
+border: none;
+}
+#logo h2 a:link, #logo h2 a:visited, #logo h2 a:hover, #logo h2 a:active {
+color: @black;
+text-decoration: none;
+}
+h2 a:link, h2 a:visited, h2 a:hover, h2 a:active {
+color: @headingsColor;
+}
+a:focus {
+	outline:0;
+}
+.page-header {
+  padding-bottom: 0px;
+  margin: 2px 0 8px 0;
+  border-bottom: 0px solid #eeeeee;
+}
+#header {
+  padding: 0 28px;
+  background: #fff;
+  border-bottom: 5px solid #f3f3f3;
+}
+#logo {
+  text-align: left;
+
+}
+#headerright {
+
+}
+/* ================  ==================  */
+code, pre {
+	background: @grayLighter;
+}
+span.highlight {
+
+}
+hr {
+
+}
+/* ================ Accordion ==================  */
+.accordion-group {
+  border: 1px solid #ccc;
+}
+.accordion-inner {
+  border-top: 1px solid #ccc;
+}
+/* ================ Alert ==================  */
+.alert .alert-heading,
+.alert h4 {
+	color: @warningText;
+}
+.alert-error .alert-heading,
+.alert-error h4 {
+	color: @errorText;
+}
+.alert-success .alert-heading,
+.alert-success h4 {
+	color: @successText;
+}
+.alert-info .alert-heading,
+.alert-info h4 {
+	color: @infoText;
+}
+/* ================ SOCIAL ==================  */
+#hsocial {
+  position: relative;
+  margin: 0px 0 0 0;
+  padding: 0 0px 0 0;
+}
+a.mytwitter {
+	margin: 0px 5px 0 0;
+	padding: 0px;
+}
+a.myfacebook {
+	margin: 0px 5px 0 0;
+	padding: 0px;
+}
+a.myfeed {
+	margin: 0px 5px 0 0;
+	padding: 0px;
+}
+a.mygoogle {
+	margin: 0px 5px 0 0;
+	padding: 0px;
+}
+a.myyoutube {
+	margin: 0px 5px 0 0;
+	padding: 0px;
+}
+/* ================== SEARCH ====================== */
+#search {
+	margin: 0px 0 10px 0;
+	padding: 0px;
+}
+#search .moduletable h3{
+  display:none;
+}
+#search .moduletable {
+  float:right;
+  margin: 0;
+}
+#search .moduletable form {
+  margin: 0;
+}
+#search input.inputbox {
+	width: 170px;
+	margin-right: 0px;
+}
+#search input.search-query {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-right: 8px \9;
+  padding-left: 8px;
+  padding-left: 8px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #778;
+}
+dl.search-results dt.result-title {
+    font-weight:bold;
+	padding-top: 10px;
+}
+dl.search-results dd.result-text {
+    padding-top: 5px;
+}
+dl.search-results dd.result-created {
+    padding-top: 5px;
+	font-size: 0.8em;
+	color: @grayLightBlue;
+}
+.moduletable div#mod-finder-advanced {
+  margin-top: 15px;
+}
+/* ================ SLIDESHOW ====================== */
+#slideshow-mod {
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	width: @gridRowWidth + 56;
+	background: #fff;
+}
+#slideshow-mod div.moduletable {
+	text-align:justify;
+	margin-bottom: 0px;
+}
+#slideshow-mod div.moduletable h3{
+font-family: @headingsFontFamily;
+text-align:left;
+font-size: 18px;
+text-transform: none;
+font-weight: normal;
+letter-spacing: 0px;
+line-height: 1.2;
+margin:0 0 10px 0;
+padding: 0;
+}
+#slsh {
+  border-bottom: 0px dotted #99a;
+}
+/* ========================================= */
+#wrap {
+	padding: 0px 28px 15px 28px;
+	position: relative;
+  background: #fff;
+}
+div.items-leading {
+	padding-bottom: 10px;
+}
+div#content p {
+    text-align: justify;
+}
+p.img_caption {
+	font-size: 11px;
+}
+/* ==================== BREADCRUMB =========================== */
+.breadcrumb {
+  font-size: 11px;
+  padding: 8px 0px 25px 0;
+  margin: 0 0 0px;
+  list-style: none;
+  background-color: transparent;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.breadcrumb img {
+	vertical-align: baseline;
+}
+/* =============== TOPMENU ================= */
+div#topmenu {
+  position: relative;
+	border-top: 0px dotted #000;
+	border-bottom: 0px dotted #000;
+}
+div#topmenu.navbar {
+  margin-bottom: 0;
+}
+div#topmenu .navbar-inner {
+  padding-left: 0px;
+  padding-right: 0px;
+  min-height: 34px;
+  border: 0;
+    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.065);
+    -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.065);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.065);
+}
+div#topmenu.navbar ul.nav {
+  margin: 0;
+}
+div#topmenu.navbar .nav > li > a {
+  padding: 11px 14px 10px 14px;
+  border-right: 0px solid #bbb;
+}
+div#topmenu div.moduletable {
+  margin: 0;
+}
+div#topmenu .nav-collapse {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0px;
+}
+div#topmenu.navbar .nav > .active > a,
+div#topmenu.navbar .nav > .active > a:hover,
+div#topmenu.navbar .nav > .active > a:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: none;
+}
+div#topmenu {
+  background: none;
+  background-color: transparent;
+}
+div#topmenu.navbar .nav > li > span.separator {
+  float: none;
+  padding: 8px 14px;
+  text-decoration: none;
+  display: block;
+  border-right: 0px solid #bbb;
+}
+div#topmenu.navbar .nav > li > span.nav-header {
+  display: block;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-right: 0px solid #bbb;
+}
+/* =============== Social icons ================= */
+div#hsocial a i[class^="icon2-"]:before,
+div#hsocial a i[class*=" icon2-"]:before {
+  font-size: 28px;
+}
+div#hsocial a:link,
+div#hsocial a:visited,
+div#hsocial a:hover,
+div#hsocial a:active {
+  color: #222;
+  text-decoration: none;
+}
+/* ============ Pagination =================== */
+.pagination {
+	text-align: center;
+	height: auto;
+	margin: 18px 0 10px 0;
+}
+div#content .pagination p.counter {
+  text-align: center;
+}
+.pagination ul {
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
+}
+.pagination a,
+.pagination span {
+  padding: 0 8px;
+  background: none;
+  border: 0px solid #ffffff;
+}
+.pagination a:hover,
+.pagination .active a,
+.pagination .active span {
+  background-color: transparent;
+}
+.pagination li:first-child a,
+.pagination li:first-child span {
+  border-left-width: 0px;
+}
+p.counter.pull-right {
+	float: none;
+}
+.pager a {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: transparent;
+  border: 0px solid #ddd;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.pager a:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+.pager .previous a, 
+.pager .next a {
+	float: none;
+}
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: transparent;
+  border: 0px solid #ddd;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+/* =========== Print, email, edit ================ */
+ul.actions {
+text-align:right;
+margin:6px 12px 0px 10px !important;
+padding:0 !important;
+}
+
+ul.actions li {
+background-image: none !important;
+margin: 0 0 0 4px !important;
+padding:0 !important;
+list-style:none;
+display:inline;
+}
+
+ul.actions a {
+text-decoration:none;
+}
+/* ================  details  ==================== */
+.content_rating {
+        font-size:0.9em;
+		color: @grayLightBlue;
+}
+.content_vote {
+        font-size:0.9em;
+		color: @grayLightBlue;
+}
+.content_vote input {
+        font-size:1em;
+}
+dl.article-info {
+        margin:5px 0 6px 0px;
+        font-size:0.8em;
+		color: @grayLightBlue;
+}
+dt.article-info-term {
+        display:none;
+}
+
+dl.article-info dd {
+        line-height:1.4em;
+		margin-left: 0;
+}
+/* =============== Figure =============== */
+figure {
+	margin: 15px;
+}
+figure.pull-left {
+	margin: 15px 15px 15px 0;
+}
+figure.pull-right {
+	margin: 15px 0px 15px 15px;
+}
+/* =============== Tags =============== */
+div.tags {
+	padding-bottom: 8px;
+}
+/* =============== Labels, Badge =============== */
+.label-info,
+.badge {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #444 !important;
+}
+a.label-info:hover,
+a.badge:hover {
+  color: #fff;
+}
+/* =============== Archive articles =============== */
+div.filter-search {
+	background-color: #f5f5f5;
+	border-color: #e5e5e5;
+}
+/* =============== Forms =============== */
+.form-actions {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border-top: 0px solid #e5e5e5;
+}
+.login .well {
+  background-color: transparent;
+  border: 0px solid #e3e3e3;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.05);	
+}
+/* =============== Button primary =============== */
+.btn-primary {
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #333333;
+}  
+/* =============== Article index =============== */
+div.article-index {
+	margin-left: 10px;
+}
+/* ============ Readmore =============== */
+p.readmore a.btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  padding: 4px 0px;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 18px;
+  *line-height: 18px;
+  text-align: left;
+  vertical-align: middle;
+  cursor: pointer;
+  color: @linkColor;
+  text-shadow: 0 0px 0px rgba(255, 255, 255, 0.75);
+  background-color: transparent;
+  background-image: none;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-color: transparent;
+  *background-color: transparent;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 0px solid #bbbbbb;
+  *border: 0;
+  border-bottom-color: transparent;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  *margin-left: 0;
+  -webkit-box-shadow: inset 0 0px 0 rgba(255,255,255,.2), 0 0px 0px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 0px 0 rgba(255,255,255,.2), 0 0px 0px rgba(0,0,0,.05);
+  box-shadow: inset 0 0px 0 rgba(255,255,255,.2), 0 0px 0px rgba(0,0,0,.05);
+}
+p.readmore a.btn:hover,
+p.readmore a.btn:active,
+p.readmore a.btn.active {
+  color: #3939ac;
+  background-color: transparent;
+  *background-color: transparent;
+}
+p.readmore a.btn:active,
+p.readmore a.btn.active {
+  background-color: transparent \9;
+}
+p.readmore a.btn:first-child {
+  *margin-left: 0;
+}
+p.readmore a.btn:hover {
+  color: #3939ac;
+  text-decoration: underline;
+  background-color: transparent;
+  *background-color: transparent;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+
+  background-position: 0 -15px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+p.readmore a.btn:focus {
+  outline: 0;
+}
+p.readmore a.btn.active,
+p.readmore a.btn:active {
+  background-color: transparent;
+  background-color: transparent \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.15), 0 0px 0px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 0px 0px rgba(0,0,0,.15), 0 0px 0px rgba(0,0,0,.05);
+  box-shadow: inset 0 0px 0px rgba(0,0,0,.15), 0 0px 0px rgba(0,0,0,.05);
+}
+p.readmore a.btn span.icon-chevron-right {
+	display:none;
+}
+
+/* ==== MODULES =======================================  */
+div.moduletable {
+margin-bottom:20px;
+border:0px #CCC solid;
+}
+div.moduletable h3 {
+font-family:  @headingsFontFamily;
+text-align:left;
+font-size:14px;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 0px;
+margin:0 0 4px 0;
+padding: 2px 0 2px 0;
+}
+/* ==== SIDEBAR MODULES =======================================  */
+#sidebar div.moduletable {
+margin-bottom:30px;
+}
+#sidebar div.moduletable h3 {
+font-family: @headingsFontFamily;
+text-align:left;
+font-size:15px;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 0px;
+margin:0 0 8px 0;
+padding: 2px 0 2px 0;
+}
+/* ==== SIDEBAR2 MODULES =======================================  */
+#sidebar-2 div.moduletable {
+margin-bottom:30px;
+}
+#sidebar-2 div.moduletable h3 {
+font-family: @headingsFontFamily;
+text-align:left;
+font-size:15px;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 0px;
+margin:0 0 8px 0;
+padding: 2px 0 2px 0;
+}
+/* ==== MODULES COLORS  =======================================  */
+div.moduletable {
+	background: none;
+}
+div.moduletable h3 {
+	color: @headingsColor;
+    background: none;
+    border-bottom: 0px solid @grayBlue;
+}
+/* ==== SIDEBAR MODULES COLORS  =======================================  */
+#sidebar div.moduletable {
+	background: none;
+}
+#sidebar div.moduletable h3 {
+	color: @headingsColor;
+    background: none;
+    border-bottom: 1px solid #556;
+}
+/* ==== SIDEBAR2 MODULES COLORS =======================================  */
+#sidebar-2 div.moduletable {
+	background: none;
+}
+#sidebar-2 div.moduletable h3 {
+	color: @headingsColor;
+    background: none;
+    border-bottom: 1px solid #556;
+}
+/* ========= Footer ========== */
+#footer {
+padding: 10px 28px 10px 28px;
+font-size: 11px;
+text-align: center;
+}
+#footer {
+	background: none;
+	color: @textColor;
+	border-top: 0px dotted #99a;
+}
+#footer a:link, #footer a:visited, #footer a:hover, #footer a:active {
+color: @textColor;
+text-decoration: underline;
+}
+/* ======= FOOTER =======================  */
+#footer div.moduletable {
+padding: 0 0 0px 0;
+margin-bottom: 0;
+}
+#footer div.moduletable h3 {
+  display:none;
+}
+#a4j {
+	text-align: center;
+	font-size: 11px;
+  padding: 7px 28px 10px 28px;
+}
+#a4j a:link, #a4j a:visited, #a4j a:hover, #a4j a:active {
+color: @textColor;
+text-decoration: underline;
+}
+/* ======= SIDE MENUS ================================  */
+.moduletable_menu {
+padding: 0px 0px 5px 0px;
+margin-bottom:30px;
+}
+.moduletable_menu h3 {
+font-family: @headingsFontFamily;
+text-align:left;
+font-size:15px;
+text-transform: uppercase;
+font-weight: bold;
+letter-spacing: 0px;
+margin:0 0 1px 0;
+padding: 2px 0 3px 0;
+}
+.moduletable_menu ul {
+list-style:none;
+margin:0;
+padding:0;
+}
+.moduletable_menu li {
+border-bottom:0px solid #ccc;
+padding: 4px 0 4px 0em;
+margin:0;
+text-transform: uppercase;
+letter-spacing:1px;
+}
+.moduletable_menu li a {
+	display:inline;
+	text-decoration:none;
+	padding: 0;
+}
+.moduletable_menu li .nav-header {
+  display: block;
+  padding: 0;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #000;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+html>body .moduletable_menu li a {
+width:auto;
+}
+.moduletable_menu li ul {
+list-style-type: square;
+list-style-position: inside;
+  font-size: 12px;
+}
+.moduletable_menu li ul li {
+	border-bottom:0px solid #ccc;
+	border-top:0px solid #ccc;
+	padding: 4px 0 2px 1em;
+	text-transform: none;
+	letter-spacing:0px;
+}
+.moduletable_menu li ul li a {
+	display:inline;
+	text-decoration:none;
+	padding: 0;
+}
+html>body .moduletable_menu li ul li a {
+width:auto;
+}
+.moduletable_menu li a:hover {
+
+}
+.moduletable_menu li.current>a {
+
+}
+/* ======= SIDE MENUS COLORS ================================  */
+.moduletable_menu {
+background: none ;
+color: @textColor;
+border-bottom: 0px solid #fff;
+}
+.moduletable_menu h3 {
+	color: @headingsColor;
+    background: none;
+    border-bottom: 1px solid #556;
+}
+.moduletable_menu li {
+	border-bottom: 1px dotted #99a;
+}
+.moduletable_menu li ul li {
+	border-bottom:0px solid #ccc;
+	border-top:0px dashed #e4e4e4;
+	background: none;
+}
+.moduletable_menu li a {
+	color: @textColor;
+}
+.moduletable_menu li ul li a {
+background: none;
+}
+.moduletable_menu ul.menu li.current a {
+	color: @linkColor;
+}
+.moduletable_menu ul.menu li.current * a {
+	color: @textColor;
+}
+.moduletable_menu li ul li a:hover, .moduletable_menu li.current ul li a:hover {
+	color: @linkColor;
+	background: none;
+}
+.moduletable_menu li a:link, .moduletable_menu li a:visited {
+color: @textColor;
+text-decoration: none;
+}
+.moduletable_menu li a:hover,
+.moduletable_menu li a:focus {
+color: @linkColor;
+background: none;
+text-decoration: none;
+}
+.moduletable_menu li a:active {
+color: @linkColor;
+text-decoration: none;
+}
+/* ===================== Login module =================== */
+.moduletable form#login-form .input-small {
+  width: 120px;
+}
+.moduletable form#login-form.form-inline label {
+  display: block;
+  margin-bottom: 2px;
+}
+.moduletable form#login-form.form-inline div#form-login-remember label {
+    display: inline-block;
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+/* ===================== Category list =================== */
+table.category {
+    font-size:1em;
+    margin:10px 0px 20px 0px;
+    width:99%;
+}
+table.category th {
+    text-transform: uppercase;
+    text-align: left; 
+	font-weight: bold;
+	font-size: 1.1em;
+}
+table.category td {
+    text-align: left; 
+	padding-top: 5px;
+}
+table.category th img {
+    padding-left: 5px;
+}
+/* ===================== List all Categories =================== */
+div.categories-list dl dt, div.categories-list dl dd { 
+    display:inline;
+	font-style: italic;
+}
+dl.article-count dt, dl.article-count dd { 
+    display:inline;
+	font-style: italic;
+}
+div.cat-children ul li dl dt, div.cat-children ul li dl dd { 
+    display:inline;
+	font-style: italic;
+}
+/* ===================== 768 - 979 =================== */
+@media (min-width: @navbarCollapseDesktopWidth) and (max-width: 979px) {
+  #header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #slideshow-mod {
+
+  }
+  #wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #a4j {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #search input.inputbox {
+	width: 135px;
+	margin-right: 0px;
+  }
+  .moduletable input#mod-search-searchword.inputbox {
+	width: 135px;
+  }
+  div#topmenu.navbar .nav-collapse .nav > li > a {
+    padding: 8px 10px;
+  }
+  div#topmenu .nav-collapse {
+    font-size: 12px;
+  }
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+  #slideshow-mod {
+	width: @gridRowWidth768 + 30;
+  }
+}
+/* ===================== 0 - 767 =================== */
+@media (max-width: @navbarCollapseWidth) {
+  body {
+	padding-left: 0px;
+	padding-right: 0px;
+	background: #fff;
+  }
+  #header {
+    padding-left: 20px;
+    padding-right: 20px;
+	border-bottom: 0;
+	padding-bottom: 10px;
+  }
+  #slideshow-mod {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #footer {
+    padding-left: 20px;
+    padding-right: 20px;
+	border-top: 1px dotted #99a;
+  }
+  #a4j {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+  #search input.inputbox {
+	width: 135px;
+	margin-right: 0px;
+  }
+  .moduletable input#mod-search-searchword.inputbox {
+	width: 135px;
+  }
+  .moduletable_menu h3 {
+    border-bottom: 1px solid #556;
+  }
+  .moduletable_menu li {
+    border-bottom: 1px solid #dde;
+  }
+  div#topmenu .navbar-inner {
+    min-height: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #ffffff;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    border: 1px solid #778;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  }
+  div#topmenu.navbar .nav-collapse .nav li {
+    border-top: 1px solid #dde;
+    line-height: 24px;
+  }
+  div#topmenu.navbar .nav-collapse .nav li a {
+    line-height: 24px;
+    padding: 13px 15px;
+    border-right: 0px solid #bbb;
+  }
+  div#topmenu.navbar .nav > li > span.separator {
+    padding: 13px 15px;
+    border-right: 0px solid #bbb;
+  }
+  div#topmenu.navbar .nav > li > span.nav-header {
+    padding: 13px 15px;
+    line-height: 24px;
+    font-size: 20px;
+    border-right: 0px solid #bbb;
+  }
+  div#topmenu.navbar .nav-collapse .nav > li > a:focus,
+  div#topmenu.navbar .nav-collapse .nav > li > a:hover {
+    background-color: #eee;
+    color: #000;
+    text-decoration: none;
+  }
+  div#topmenu.navbar .nav-collapse .nav > .active > a {
+    color: #000;
+    text-decoration: none;
+    background-color: #ffffff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  div#topmenu.navbar .nav-collapse .nav > .active > a:hover,
+  div#topmenu.navbar .nav-collapse .nav > .active > a:focus {
+    color: #000;
+    text-decoration: none;
+    background-color: #eee;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  div#topmenu .nav-collapse {
+    text-transform: uppercase;
+	background: #fff;
+  }
+  div#topmenu .nav-collapse .nav li > a {
+    margin-bottom: 0px;
+  }
+  div#topmenu.navbar .nav-collapse.pull-right {
+    float: none;
+  }
+  div#topmenu .icon-downarrow:before {
+    color: #555;
+  }
+  div#topmenu.navbar .brand {
+    padding: 15px 20px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  div#topmenu.navbar .btn-navbar {
+    padding: 9px 11px 7px 11px;
+    text-shadow: none;
+	border-color: #99a #99a #99a;
+  }
+  div#topmenu .nav-collapse {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  div#topmenu {
+    border: 0;
+  }
+}

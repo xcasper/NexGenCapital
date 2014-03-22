@@ -1,0 +1,380 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Tabs
+ * @version         3.4.2
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+/*
+ * You can override this stylesheet by creating your own in:
+ * /templates/[YOUR TEMPLATE]/css/tabs/style.min.css
+ */
+@import "../../nnframework/less/init.less";
+@import "bootstrap.less";
+
+.nn_tabs {
+	> ul.nav-tabs-sm {
+		display: none;
+	}
+	> ul.nav-tabs {
+		> li {
+			&:before {
+				content: "";
+				margin: 0;
+				padding: 0;
+			}
+			> a {
+				.transition-duration(.2s);
+				color: @linkColor;
+				text-decoration: none;
+				line-height: inherit;
+				&:hover {
+					color: @linkColorHover;
+					text-decoration: none;
+				}
+			}
+			> a:focus,
+			&.active > a:focus {
+				outline: none;
+				border-top-color: rgb(234, 176, 63);
+				border-left-color: rgb(234, 176, 63);
+				border-right-color: rgb(234, 176, 63);
+				-webkit-box-shadow: 0 -2px 2px rgba(234, 176, 63, 0.5);
+				box-shadow: 0 -2px 2px rgba(234, 176, 63, 0.5);
+			}
+		}
+	}
+	> .tab-content {
+		padding: 0;
+		margin-bottom: 10px;
+		> .tab-pane {
+			padding: 12px 0;
+			overflow-x: auto;
+			overflow-y: hidden;
+			& > :first-child {
+				margin-top: 0;
+			}
+			& > :last-child {
+				margin-bottom: 0;
+			}
+			.nn_tabs-title {
+				display: none;
+			}
+		}
+	}
+
+	.nn_tabs-scroll,
+	.nn_tabs-sm-scroll {
+		position: relative;
+		visibility: hidden;
+	}
+
+	&.nn_tabs-responsive {
+		@media (max-width: 768px) {
+			> ul.nav-tabs-sm {
+				display: block;
+			}
+			> ul.nav-tabs {
+				display: none;
+			}
+			> .tab-content {
+				> .tab-pane {
+					display: block;
+					.nn_tabs-title {
+						display: block;
+					}
+				}
+			}
+			.fade {
+				opacity: 1;
+			}
+			// Outline Content
+			&.outline_content {
+				> .tab-content {
+					border: none;
+					> .tab-pane {
+						padding: 12px 0;
+					}
+				}
+			}
+		}
+	}
+
+	// Outline Content
+	&.outline_content {
+		> .tab-content {
+			margin-bottom: 18px;
+			border: 1px solid #ddd;
+			border-top: none;
+			.border-radius(0 0 4px 4px);
+			> .tab-pane {
+				padding: 12px;
+			}
+		}
+
+		> ul.nav-tabs {
+			margin-bottom: 0;
+		}
+	}
+
+	// Outline Tabs
+	&.outline_handles {
+		> ul.nav-tabs > li {
+			a,
+			a:hover, {
+				border-top-color: #ddd;
+				border-left-color: #ddd;
+				border-right-color: #ddd;
+			}
+		}
+	}
+
+	@media (min-width: 769px) {
+		// Right Alignment
+		&.align_right {
+			> ul.nav-tabs {
+				> li {
+					float: right;
+					> a {
+						margin-left: 2px;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		// Centered Alignment
+		&.align_center {
+			> ul.nav-tabs {
+				text-align: center;
+				> li {
+					float: none;
+					display: inline-block;
+					.ie7-inline-block();
+					margin-left: -1px;
+					margin-right: -3px;
+				}
+			}
+		}
+
+		// Justified Alignment
+		&.align_justify {
+			> ul.nav-tabs {
+				text-align: center;
+				display: table;
+				width: 100%;
+				margin-bottom: -1px;
+				> .nn_tabs-scroll {
+					display: table-cell;
+				}
+				> li {
+					float: none;
+					display: table-cell;
+					&:last-child > a {
+						margin-right: 0;
+					}
+					a {
+						margin-bottom: -1px;
+					}
+					a:hover, {
+						border-bottom-color: #eee;
+					}
+					&.active a,
+					&.active a:hover {
+						border-bottom: 2px solid #fff;
+						margin-bottom: -1px;
+					}
+				}
+				&:before {
+					display: none;
+				}
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// Classes: Normal state + Hover state
+	> ul.nav-tabs {
+		// Small screen styling
+		@media (max-width: 768px) {
+			> li {
+				float: none;
+				&:last-child,
+				&.active:last-child {
+					> a,
+					> a:hover {
+						.border-radius(4px 4px 0 0);
+						border-bottom: 1px solid #ddd;
+					}
+				}
+				> a {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.tabColor(@name, @color) {
+			> li.@{name} {
+				> a,
+				> a:hover {
+					border-top: 5px solid lighten(@color, 20%);
+					padding-top: 4px;
+					.border-radius(5px 5px 0 0);
+				}
+				> a:hover, // Hover state
+				&.active > a {
+					// Active state
+					border-top-color: @color;
+				}
+			}
+			@media (max-width: 768px) {
+				> li.@{name} {
+					> a,
+					> a:hover {
+						border-top: 1px solid lighten(@color, 20%);
+						border-left: 1px solid lighten(@color, 20%);
+						border-right: 1px solid lighten(@color, 20%);
+					}
+				}
+			}
+		}
+
+		// Style: blue
+		.tabColor(~'blue', @btnPrimaryBackground);
+		.tabColor(~'primary', @btnPrimaryBackground);
+
+		// Style: info
+		.tabColor(~'info', @btnInfoBackgroundHighlight);
+
+		// Style: green / success
+		.tabColor(~'green', @btnSuccessBackgroundHighlight);
+		.tabColor(~'success', @btnSuccessBackgroundHighlight);
+
+		// Style: orange / warning
+		.tabColor(~'orange', @btnWarningBackgroundHighlight);
+		.tabColor(~'warning', @btnWarningBackgroundHighlight);
+
+		// Style: red / danger
+		.tabColor(~'red', @btnDangerBackgroundHighlight);
+		.tabColor(~'danger', @btnDangerBackgroundHighlight);
+		.tabColor(~'error', @btnDangerBackgroundHighlight);
+
+		// Style: grey / gray
+		.tabColor(~'grey', #808080);
+		.tabColor(~'gray', #808080);
+	}
+}
+
+/*
+Still need to check below out
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+	border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+	display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+	display: block;
+}
+
+.tabs-below > .nav-tabs {
+	border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+	margin-top: -1px;
+	margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+	border-top-color: #ddd;
+	border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+	border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+	float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+	min-width: 74px;
+	margin-right: 0;
+	margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+	float: left;
+	margin-right: 19px;
+	border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+	margin-right: -1px;
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+	border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+	border-color: #ddd transparent #ddd #ddd;
+	*border-right-color: #ffffff;
+}
+
+.tabs-right > .nav-tabs {
+	float: right;
+	margin-left: 19px;
+	border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+	margin-left: -1px;
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+	border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+	border-color: #ddd #ddd #ddd transparent;
+	*border-left-color: #ffffff;
+}
+*/

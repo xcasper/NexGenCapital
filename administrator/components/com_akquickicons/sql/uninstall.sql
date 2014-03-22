@@ -1,0 +1,1 @@
+DROP TABLE  `#__akquickicons_icons`

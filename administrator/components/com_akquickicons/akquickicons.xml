@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2" method="upgrade">
+	<name>com_akquickicons</name>
+	<creationDate>2012-11-15</creationDate>
+	<copyright>Copyright (C) 2012. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Asika</author>
+	<authorEmail>asika32764@gmail.com</authorEmail>
+	<authorUrl>http://asikart.com</authorUrl>
+	<version>1.1.8</version>
+	<description></description>
+	
+	
+	<scriptfile>install.php</scriptfile>
+	
+	
+	<install>
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/install.sql</file>
+  		</sql>
+    </install>
+	
+	<uninstall>
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+  		</sql>
+    </uninstall>
+	
+	
+	
+	<administration>
+		<menu img="components/com_akquickicons/images/admin-icons/menu-akquickicons.png">COM_AKQUICKICONS</menu>
+		
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>controller.php</filename>
+			<filename>akquickicons.php</filename>
+			<filename>install.php</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>images</folder>
+			<folder>includes</folder>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>windwalker</folder>
+		</files>
+	</administration>
+	
+	
+	
+	<modules>
+		<module>mod_akquickicons</module>
+	</modules>
+	
+	
+	<plugins>
+		
+	</plugins>
+	
+	<updateservers>
+        <server type="extension" priority="1" name="Asikart QuickIcons">http://asikart.com/update/com_akquickicons.xml</server>
+    </updateservers>
+	
+</extension>
+

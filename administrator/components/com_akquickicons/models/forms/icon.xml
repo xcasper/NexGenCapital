@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="basic">
+		<fieldset name="information" align="left" horz="true">
+		
+			<field name="title"
+				type="text"
+				label="JGLOBAL_TITLE"
+				description="JFIELD_TITLE_DESC"
+				required="true"
+				size="50"
+				labelclass="control-label"
+			/>
+			
+			<field name="param_langkey"
+				type="text"
+				label="COM_AKQUICKICONS_LANGUAGE_KEY"
+				description="COM_AKQUICKICONS_LANGUAGE_KEY_DESC"
+				size="45"
+				labelclass="control-label"
+			/>
+			
+			<field name="catid"
+				type="category"
+				label="JCATEGORY"
+				description="JFIELD_CATEGORY_DESC"
+				extension="com_akquickicons"
+				labelclass="control-label"
+			/>
+			
+			<field name="link"
+				type="text"
+				label="COM_AKQUICKICONS_LINK_LABEL"
+				description="COM_AKQUICKICONS_LINK_DESC"
+				size="75"
+				class="input-xxlarge"
+				required="true"
+				labelclass="control-label"
+			/>
+			
+			<field name="url_menus"
+				type="quick_menus"
+				label="COM_AKQUICKICONS_QUICKURL_MENUS_LABEL"
+				description="COM_AKQUICKICONS_QUICKURL_MENUS_DESC"
+				preview="true"
+				directory="quickicons"
+				select="menus"
+				labelclass="control-label"
+			/>
+			
+			<field name="url_articles"
+				type="quick_modal"
+				label="COM_AKQUICKICONS_QUICKURL_ARTICLES_LABEL"
+				description="COM_AKQUICKICONS_QUICKURL_ARTICLES_DESC"
+				select="articles"
+				labelclass="control-label"
+			/>
+			
+			<field name="url_modules"
+				type="quick_modal"
+				label="COM_AKQUICKICONS_QUICKURL_MODULES_LABEL"
+				description="COM_AKQUICKICONS_QUICKURL_MODULES_DESC"
+				select="modules"
+				labelclass="control-label"
+			/>
+			
+			<field name="url_plugins"
+				type="quick_modal"
+				label="COM_AKQUICKICONS_QUICKURL_PLUGINS_LABEL"
+				description="COM_AKQUICKICONS_QUICKURL_PLUGINS_DESC"
+				select="plugins"
+				labelclass="control-label"
+			/>
+	
+			
+			<field name="icon_class"
+				type="icon_modal"
+				label="COM_AKQUICKICONS_ICON_CLASS"
+				description="COM_AKQUICKICONS_ICON_CLASS_DESC"
+				preview="true"
+				directory="quickicons"
+				select="icon"
+				labelclass="control-label"
+				class="onlyj30"
+			/>
+			
+			<field name="images"
+				type="media"
+				label="COM_AKQUICKICONS_IMAGES"
+				description="COM_AKQUICKICONS_IMAGES_DESC"
+				preview="true"
+				directory="quickicons"
+				labelclass="control-label"
+			/>
+	
+			<field name="checked_out" type="hidden" filter="unset" />
+			<field name="checked_out_time" type="hidden" filter="unset" />
+		</fieldset>
+		
+		<fieldset name="advanced" align="right" horz="true">
+			
+			<field name="param_target"
+				type="list"
+				label="COM_AKQUICKICONS_TARGET_LABEL"
+				description="COM_AKQUICKICONS_TARGET_DESC"
+				class="inputbox"
+				size="1"
+				default=""
+				labelclass="control-label"
+			>
+				<option value="">COM_AKQUICKICONS_TARGET_OPT_SELF</option>
+				<option value="blank">COM_AKQUICKICONS_TARGET_OPT_BLANK</option>
+				<option value="modal">COM_AKQUICKICONS_TARGET_OPT_MODAL</option>
+			</field>
+			
+			<field name="param_smart_url"
+				type="radio"
+				label="COM_AKQUICKICONS_SMART_URL_LABEL"
+				description="COM_AKQUICKICONS_SMART_URL_DESC"
+				class="inputbox btn-group"
+				size="1"
+				default="1"
+				labelclass="control-label"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			
+			<field name="published"
+				type="radio"
+				label="JSTATUS"
+				description="JFIELD_PUBLISHED_DESC"
+				class="inputbox btn-group"
+				size="1"
+				default="1"
+				labelclass="control-label"
+			>
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+			</field>
+			
+			<field name="param_id"
+				type="text"
+				label="COM_AKQUICKICONS_CUSTOM_ID"
+				description="COM_AKQUICKICONS_CUSTOM_ID_DESC"
+				labelclass="control-label"
+			/>
+			
+			<field name="param_class"
+				type="text"
+				label="COM_AKQUICKICONS_CUSTOM_CLASS"
+				description="COM_AKQUICKICONS_CUSTOM_CLASS_DESC"
+				labelclass="control-label"
+			/>
+			
+			<field name="alias"
+				type="text"
+				label="JFIELD_ALIAS_LABEL"
+				description="JFIELD_ALIAS_DESC"
+				size="45"
+				labelclass="control-label"
+			/>
+			
+		</fieldset>
+		
+	</fields>
+	
+	
+	<fields name="publishing">
+		<fieldset name="publish" horz="true">
+			<field name="id" 
+				type="text" 
+				default="0" 
+				label="JGLOBAL_FIELD_ID_LABEL"
+				readonly="true" 
+				class="readonly"
+				description="JGLOBAL_FIELD_ID_DESC"
+				labelclass="control-label"
+			/>
+			
+			<field name="created_by"
+				type="user"
+				label="COM_AKQUICKICONS_CREATED_BY"
+				description="COM_AKQUICKICONS_CREATED_BY_DESC"
+				labelclass="control-label"
+			/>
+			
+			<field name="created"
+				type="calendar"
+				label="COM_AKQUICKICONS_CREATED"
+				description="COM_AKQUICKICONS_CREATED_DESC"
+				labelclass="control-label"
+			/>
+			
+			<field name="publish_up"
+				type="calendar"
+				label="COM_AKQUICKICONS_PUBLISH_UP"
+				description="COM_AKQUICKICONS_PUBLISH_UP_DESC"
+				labelclass="control-label"
+			/>
+			
+			<field name="publish_down"
+				type="calendar"
+				label="COM_AKQUICKICONS_PUBLISHED_DOWN"
+				description="COM_AKQUICKICONS_PUBLISH_DOWN_DESC"
+				labelclass="control-label"
+			/>
+			
+			<field name="access"
+				type="accesslevel"
+				label="JFIELD_ACCESS_LABEL"
+				description="JFIELD_ACCESS_DESC"
+				labelclass="control-label"
+				default="1"
+			/>
+			
+			<field name="language"
+				type="language"
+				label="JGRID_HEADING_LANGUAGE"
+				description="JGRID_HEADING_LANGUAGE"
+				labelclass="control-label"
+			>
+				<option value="*">JALL</option>
+			</field>
+			
+			
+		</fieldset>
+	</fields>
+	
+	<!-- Need this field br child of root node for access setting. -->
+	<field name="asset_id" type="hidden" filter="unset" />
+	
+	<fields name="rules">
+		<fieldset name="rules">
+			<field name="rules"
+				type="rules"
+				label=""
+				translate_label="false"
+				class="inputbox"
+				filter="rules"
+				component="com_akquickicons"
+				section="icon"
+				validate="rules"
+			/>
+		</fieldset>
+	</fields>
+	
+</form>

@@ -1,0 +1,233 @@
+@font-face {
+	font-family: 'icomoon2';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon2]:before {
+	font-family: 'icomoon2';
+	content: attr(data-icon2);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon2-"]:before {
+*/
+.icon2-google:before, .icon2-google-plus:before, .icon2-google-plus-2:before, .icon2-google-plus-3:before, .icon2-google-plus-4:before, .icon2-google-drive:before, .icon2-facebook:before, .icon2-facebook-2:before, .icon2-facebook-3:before, .icon2-instagram:before, .icon2-twitter:before, .icon2-twitter-2:before, .icon2-twitter-3:before, .icon2-feed:before, .icon2-feed-2:before, .icon2-feed-3:before, .icon2-youtube:before, .icon2-youtube-2:before, .icon2-vimeo:before, .icon2-vimeo2:before, .icon2-vimeo-2:before, .icon2-lanyrd:before, .icon2-flickr:before, .icon2-flickr-2:before, .icon2-flickr-3:before, .icon2-flickr-4:before, .icon2-picassa:before, .icon2-picassa-2:before, .icon2-dribbble:before, .icon2-dribbble-2:before, .icon2-dribbble-3:before, .icon2-forrst:before, .icon2-forrst-2:before, .icon2-deviantart:before, .icon2-deviantart-2:before, .icon2-steam:before, .icon2-steam-2:before, .icon2-github:before, .icon2-github-2:before, .icon2-github-3:before, .icon2-github-4:before, .icon2-github-5:before, .icon2-wordpress:before, .icon2-wordpress-2:before, .icon2-joomla:before, .icon2-blogger:before, .icon2-blogger-2:before, .icon2-tumblr:before, .icon2-tumblr-2:before, .icon2-yahoo:before, .icon2-tux:before, .icon2-apple:before, .icon2-finder:before, .icon2-android:before, .icon2-windows:before, .icon2-windows8:before, .icon2-soundcloud:before, .icon2-soundcloud-2:before, .icon2-skype:before, .icon2-reddit:before, .icon2-linkedin:before, .icon2-lastfm:before, .icon2-lastfm-2:before, .icon2-delicious:before, .icon2-stumbleupon:before, .icon2-stumbleupon-2:before {
+	font-family: 'icomoon2';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon2-google:before {
+	content: "\f000";
+}
+.icon2-google-plus:before {
+	content: "\f001";
+}
+.icon2-google-plus-2:before {
+	content: "\f002";
+}
+.icon2-google-plus-3:before {
+	content: "\f003";
+}
+.icon2-google-plus-4:before {
+	content: "\f004";
+}
+.icon2-google-drive:before {
+	content: "\f005";
+}
+.icon2-facebook:before {
+	content: "\f006";
+}
+.icon2-facebook-2:before {
+	content: "\f007";
+}
+.icon2-facebook-3:before {
+	content: "\f008";
+}
+.icon2-instagram:before {
+	content: "\f009";
+}
+.icon2-twitter:before {
+	content: "\f00a";
+}
+.icon2-twitter-2:before {
+	content: "\f00b";
+}
+.icon2-twitter-3:before {
+	content: "\f00c";
+}
+.icon2-feed:before {
+	content: "\f00d";
+}
+.icon2-feed-2:before {
+	content: "\f00e";
+}
+.icon2-feed-3:before {
+	content: "\f00f";
+}
+.icon2-youtube:before {
+	content: "\f010";
+}
+.icon2-youtube-2:before {
+	content: "\f011";
+}
+.icon2-vimeo:before {
+	content: "\f012";
+}
+.icon2-vimeo2:before {
+	content: "\f013";
+}
+.icon2-vimeo-2:before {
+	content: "\f014";
+}
+.icon2-lanyrd:before {
+	content: "\f015";
+}
+.icon2-flickr:before {
+	content: "\f016";
+}
+.icon2-flickr-2:before {
+	content: "\f017";
+}
+.icon2-flickr-3:before {
+	content: "\f018";
+}
+.icon2-flickr-4:before {
+	content: "\f019";
+}
+.icon2-picassa:before {
+	content: "\f01a";
+}
+.icon2-picassa-2:before {
+	content: "\f01b";
+}
+.icon2-dribbble:before {
+	content: "\f01c";
+}
+.icon2-dribbble-2:before {
+	content: "\f01d";
+}
+.icon2-dribbble-3:before {
+	content: "\f01e";
+}
+.icon2-forrst:before {
+	content: "\f01f";
+}
+.icon2-forrst-2:before {
+	content: "\f020";
+}
+.icon2-deviantart:before {
+	content: "\f021";
+}
+.icon2-deviantart-2:before {
+	content: "\f022";
+}
+.icon2-steam:before {
+	content: "\f023";
+}
+.icon2-steam-2:before {
+	content: "\f024";
+}
+.icon2-github:before {
+	content: "\f025";
+}
+.icon2-github-2:before {
+	content: "\f026";
+}
+.icon2-github-3:before {
+	content: "\f027";
+}
+.icon2-github-4:before {
+	content: "\f028";
+}
+.icon2-github-5:before {
+	content: "\f029";
+}
+.icon2-wordpress:before {
+	content: "\f02a";
+}
+.icon2-wordpress-2:before {
+	content: "\f02b";
+}
+.icon2-joomla:before {
+	content: "\f02c";
+}
+.icon2-blogger:before {
+	content: "\f02d";
+}
+.icon2-blogger-2:before {
+	content: "\f02e";
+}
+.icon2-tumblr:before {
+	content: "\f02f";
+}
+.icon2-tumblr-2:before {
+	content: "\f030";
+}
+.icon2-yahoo:before {
+	content: "\f031";
+}
+.icon2-tux:before {
+	content: "\f032";
+}
+.icon2-apple:before {
+	content: "\f033";
+}
+.icon2-finder:before {
+	content: "\f034";
+}
+.icon2-android:before {
+	content: "\f035";
+}
+.icon2-windows:before {
+	content: "\f036";
+}
+.icon2-windows8:before {
+	content: "\f037";
+}
+.icon2-soundcloud:before {
+	content: "\f038";
+}
+.icon2-soundcloud-2:before {
+	content: "\f039";
+}
+.icon2-skype:before {
+	content: "\f03a";
+}
+.icon2-reddit:before {
+	content: "\f03b";
+}
+.icon2-linkedin:before {
+	content: "\f03c";
+}
+.icon2-lastfm:before {
+	content: "\f03d";
+}
+.icon2-lastfm-2:before {
+	content: "\f03e";
+}
+.icon2-delicious:before {
+	content: "\f03f";
+}
+.icon2-stumbleupon:before {
+	content: "\f040";
+}
+.icon2-stumbleupon-2:before {
+	content: "\f041";
+}

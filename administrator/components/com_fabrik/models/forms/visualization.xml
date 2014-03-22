@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<form>
+	<name>Visualization Edit Form</name>
+	
+	<fieldset addfieldpath="/administrator/components/com_fabrik/models/fields" name="details">
+				
+		<field class="readonly" default="0" label="COM_FABRIK_ID_LABEL" name="id" readonly="true" size="10" type="text"/>
+			
+		<field filter="unset" label="" name="asset_id" type="hidden"/>
+		
+		<field description="COM_FABRIK_FIELD_VIZUALIZATION_LABEL_DESC" label="COM_FABRIK_FIELD_VIZUALIZATION_LABEL_LABEL" name="label" required="true" size="35" type="text"/>
+			
+		<field name="intro_text"
+			type="editor"
+			description="COM_FABRIK_FIELD_INTRODUCTION_DESC"
+			label="COM_FABRIK_FIELD_INTRODUCTION_LABEL" rows="3" buttons="false" />
+			
+		<field description="COM_FABRIK_FIELD_VISUALIZATION_PLUGIN_DESC" label="COM_FABRIK_FIELD_VISUALIZATION_PLUGIN_LABEL" name="plugin" plugin="fabrik_visualization" required="true" type="pluginlist"/>
+			
+		</fieldset>
+	<fieldset name="publishing">
+		
+		<field class="btn-group" default="0" label="JPUBLISHED" name="published" type="radio">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+		</field>
+		
+		<field 
+			name="created_by" 
+			type="user"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL" 
+			description="JGLOBAL_FIELD_CREATED_BY_DESC" 
+		/>
+			
+		<field description="JFIELD_ACCESS_DESC" label="JFIELD_ACCESS_LABEL" name="access" type="accesslevel"/>
+
+		<field name="created"
+			type="calendar"
+			class="input-medium"
+			label="JGLOBAL_FIELD_CREATED_LABEL"
+			description="JGLOBAL_FIELD_CREATED_DESC" 
+		/>
+			
+		<field name="publish_up"
+			type="calendar"
+			class="input-medium"
+			label="JGLOBAL_FIELD_PUBLISH_UP_LABEL"
+			description="JGLOBAL_FIELD_PUBLISH_UP_DESC"
+			/>
+			
+		<field name="publish_down"
+			type="calendar"
+			class="input-medium"
+			label="JGLOBAL_FIELD_PUBLISH_DOWN_LABEL"
+			description="JGLOBAL_FIELD_PUBLISH_DOWN_DESC"
+			/>
+			
+	</fieldset>
+	
+	<fields name="params">
+		<fieldset name="more">
+			
+			<field class="btn-group" default="1" description="COM_FABRIK_FIELD_SHOW_TITLE_DESC" label="COM_FABRIK_FIELD_SHOW_TITLE_LABEL" name="show-title" type="radio">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+			
+			<field class="btn-group" default="1" description="COM_FABRIK_FIELD_SHOW_FILTERS_DESC" label="COM_FABRIK_FIELD_SHOW_FILTERS_LABEL" name="show_filters" type="radio">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+			
+		</fieldset>
+	</fields>
+</form>

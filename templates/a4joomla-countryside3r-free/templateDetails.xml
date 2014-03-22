@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.2" type="template" client="site" method="upgrade">
+	<name>a4joomla-countryside3r-free</name>
+	<creationDate>July 2013</creationDate>
+	<author>a4joomla.com</author>
+	<authorEmail>admin@a4joomla.com</authorEmail>
+	<authorUrl>www.a4joomla.com</authorUrl>
+	<copyright>Copyright 2013 a4joomla.com</copyright>
+	<license>Creative Commons</license>
+	<version>1.2.3</version>
+	<description>
+	<![CDATA[
+	<h1>a4joomla countryside3r free</h1>
+	<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+	<img alt="Creative Commons License" style="border-width:0;" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a></p>
+	<p>This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://a4joomla.com" property="cc:attributionName" rel="cc:attributionURL">a4joomla.com</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License</a>.</p>
+	<p style="color: red; font-weight: bold; font-size: 13px;">The professional version can be purchased at <a href="http://a4joomla.com/">a4joomla.com</a>.</p>
+	<img src="../templates/a4joomla-countryside3r-free/template_thumbnail.png" align="left" style="margin-right:5px;" />
+	]]> 
+	</description>
+<files>
+  <filename>index.php</filename>
+  <filename>index.html</filename>
+  <filename>templateDetails.xml</filename>
+  <filename>template_thumbnail.png</filename>
+  <filename>template_preview.png</filename>
+  <filename>component.php</filename>
+  <folder>html</folder>
+  <folder>fonts</folder>
+  <folder>js</folder>
+  <folder>css</folder>
+  <folder>images</folder>
+  <folder>language</folder>
+  <folder>less</folder>
+</files>
+<positions>                          
+  <position>position-0</position>
+  <position>position-1</position>
+  <position>position-2</position>
+  <position>position-6</position>
+  <position>position-7</position>
+  <position>position-14</position>
+  <position>slideshow</position>
+</positions>
+<languages folder="language">
+	<language tag="en-GB">en-GB/en-GB.tpl_a4joomla-countryside3r-free.ini</language>
+	<language tag="en-GB">en-GB/en-GB.tpl_a4joomla-countryside3r-free.sys.ini</language>
+</languages>          
+<config>
+  <fields name="params">
+    <fieldset name="HEADER_SETTINGS">
+       <field name="logoText" type="text" default="COUNTRYSIDE3R" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LOGOTEXT_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LOGOTEXT_DESC" />
+       <field name="logoTextPosition" type="text" default="25" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LOGOTEXTPOSITION_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LOGOTEXTPOSITION_DESC" />
+       <field name="logoFontsize" type="text" default="32" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LOGOFONTSIZE_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LOGOFONTSIZE_DESC" />
+       <field name="logoWidth" type="list" default="5" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LOGOWIDTH_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LOGOWIDTH_DESC">
+		  <option value="1">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH1</option>
+		  <option value="2">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH2</option>
+		  <option value="3">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH3</option>
+		  <option value="4">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH4</option>
+		  <option value="5">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH5</option>
+		  <option value="6">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH6</option>
+		  <option value="7">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH7</option>
+		  <option value="8">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH8</option>
+		  <option value="9">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH9</option>
+		  <option value="10">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH10</option>
+		  <option value="11">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH11</option>
+		  <option value="12">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LOGOWIDTH12</option>		  
+       </field>       
+	   <field name="slogan" type="text" default="Joomla template from a4joomla.com" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_SLOGAN_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_SLOGAN_DESC" />
+       <field name="sloganPosition" type="text" default="-5" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_SLOGANPOSITION_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_SLOGANPOSITION_DESC" />
+       <field name="searchPosition" type="text" default="35" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_SEARCHPOSITION_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_SEARCHPOSITION_DESC" />
+       <field name="topmenuPosition" type="text" default="20" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_TOPMENUPOSITION_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_TOPMENUPOSITION_DESC" />
+       <field name="slideshowPosition" type="text" default="0" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_SLIDESHOWPOSITION_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_SLIDESHOWPOSITION_DESC" />
+	   </fieldset>
+	<fieldset name="LAYOUT_SETTINGS">
+       <field name="rightColumnWidth" type="list" default="3" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_RIGHTCOLUMNWIDTH_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_RIGHTCOLUMNWIDTH_DESC">
+		  <option value="1">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_RIGHTWIDTH1</option>
+		  <option value="2">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_RIGHTWIDTH2</option>
+		  <option value="3">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_RIGHTWIDTH3</option>
+		  <option value="4">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_RIGHTWIDTH4</option>
+		  <option value="5">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_RIGHTWIDTH5</option>
+		  <option value="6">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_RIGHTWIDTH6</option>
+       </field> 
+       <field name="leftColumnWidth" type="list" default="3" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LEFTCOLUMNWIDTH_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_LEFTCOLUMNWIDTH_DESC">
+		  <option value="1">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LEFTWIDTH1</option>
+		  <option value="2">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LEFTWIDTH2</option>
+		  <option value="3">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LEFTWIDTH3</option>
+		  <option value="4">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LEFTWIDTH4</option>
+		  <option value="5">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LEFTWIDTH5</option>
+		  <option value="6">TPL_A4JOOMLA-COUNTRYSIDE-FREE_OPTION_LEFTWIDTH6</option>
+       </field> 
+	</fieldset>
+	<fieldset name="SOCIAL_ICONS">
+       <field name="twitterUrl" type="text" default="" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_TWITTERURL_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_TWITTERURL_DESC" />
+       <field name="facebookUrl" type="text" default="" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_FACEBOOKURL_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_FACEBOOKURL_DESC" />
+       <field name="googleUrl" type="text" default="" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_GOOGLEURL_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_GOOGLEURL_DESC" />
+       <field name="feedUrl" type="text" default="" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_FEEDURL_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_FEEDURL_DESC" />
+       <field name="youtubeUrl" type="text" default="" label="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_YOUTUBEURL_LABEL" description="TPL_A4JOOMLA-COUNTRYSIDE-FREE_FIELD_YOUTUBEURL_DESC" />
+	</fieldset>
+  </fields>
+</config>
+</extension>

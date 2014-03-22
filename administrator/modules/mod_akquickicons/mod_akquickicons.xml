@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.2"
+	client="administrator"
+	method="upgrade">
+	<name>Asikart QuickIcons Module</name>
+	<author>Asika</author>
+	<creationDate>2012-08-11</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 http://asikart.com</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>asika@asikart.com</authorEmail>
+	<authorUrl>http://asikart.com</authorUrl>
+	<version>1.4</version>
+	<description>MOD_AKQUICKICONS_INSTALL_DESC</description>
+	<files>
+		<filename module="mod_akquickicons">mod_akquickicons.php</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+		<folder>language</folder>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>mod_akquickicons.xml</filename>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_FOOTER" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="administrator/components/com_akquickicons/models/fields">
+				<field
+					name="catid"
+					type="iconcategory"
+					label="JCATEGORY"
+					description="JFIELD_CATEGORY_DESC"
+					extension="com_akquickicons"
+					multiple="true"
+					size="8"
+				>
+					<option value="1">MOD_AKQUICKICONS_OPTION_ALL_CATEGORY</option>
+				</field>
+				
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+					defalut="joomla25" />
+				
+				<field
+					name="get_icon_from_plugins"
+					type="radio"
+					label="MOD_AKQUICKICONS_GET_ICON_FROM_PLUGINS_LABEL"
+					description="MOD_AKQUICKICONS_GET_ICON_FROM_PLUGINS_DESC"
+					default="1"
+					class="btn-group"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+			</fieldset>
+			<fieldset name="advanced">
+				
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
