@@ -1,0 +1,32 @@
+function get_references() {
+
+	$db = JFactory::getDbo();
+
+	$query = $db->getQuery(true);
+	
+	$query->select($db->quoteName(array('user_id', 'name', 'number', 'relationship')));
+	$query->from($db->quoteName('team_references'));
+	$query->where($db->quoteName('user_id'). "=" . $user_id);
+	$query->order($db->quoteName('user_id ASC');
+	
+	$db->setQuery($query);
+	
+	$results = $db->loadRowList($query);	
+
+}
+
+function get_log() {
+	$db = JFactory::getDbo();
+
+	$query = $db->getQuery(true);
+	
+	$query->select($db->quoteName(array('user_id', 'search_query', 'date')));
+	$query->from($db->quoteName('team_log'));
+	$query->where($db->quoteName('user_id'). "=" . $user_id);
+	$query->order($db->quoteName('user_id ASC');
+	
+	$db->setQuery($query);
+	
+	$results = $db->loadRowList($query);
+}
+
