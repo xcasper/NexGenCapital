@@ -61,4 +61,4 @@ Sample Data:
         "ethnicity": "Hispanic",
         "cip": "20.0201",
         "cobased": "Yes"
-    }
+    

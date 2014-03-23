@@ -181,7 +181,21 @@ function get_resume($user_id) {
 
 }
 
+function get_education($user_id) {
 
+	$db = JFactory:: getDbo();
+
+	$query = $db->getQuery(true);
+
+	$query->select($db->quoteName(array('schoolname', 'schoolcode', 'schoollevel')));
+	$query->from($db->quoteName('team_education'));
+	$query->where($db->quoteName('user_id') . " = " . $user_id);
+	
+	$db->setQuery($query);
+
+	$results = $db->loadAssocList();
+	return $results;
+}
 function get_references($user_id) {
 
   $db = JFactory::getDbo();
