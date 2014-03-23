@@ -6,7 +6,7 @@ require_once ( JPATH_BASE .'/includes/defines.php' );
 require_once ( JPATH_BASE .'/includes/framework.php' );
 require_once ( JPATH_BASE .'/libraries/joomla/factory.php' );
 
-JFactory::getApplication('site')->initialise();
+//JFactory::getApplication('site')->initialise();  //uncomment this line if you need to use this file direclty for testing. 
 function get_user($user_id) {
 
   $db = JFactory:: getDbo();
