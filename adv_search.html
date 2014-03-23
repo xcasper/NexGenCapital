@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#hiding_ipt').click(function() {
+    
+  $('#hidable_fields').hide();
+  $(this).hide();
+  $('#showing_ipt').show();
+ });
+  $('#showing_ipt').click(function() {
+    
+  $('#hidable_fields').show();
+  $(this).hide();
+  $('#hiding_ipt').show();
+ });
+  });
+
+</script>
+<style type="text/css">
+  #nexgen_searc_frm input {
+    padding: 0;
+    margin: 0px;
+  }
+  #hidable_fields {
+    border: none;
+    margin: 0 auto;
+      background: lightblue;
+  }
+  #hidable_fields input {
+    margin: -3px;
+  }
+  #nexgen_search_frm {
+    width: 215px;
+    margin: 0 auto;
+  }
+  .class_res {
+    height: 300px; 
+    border: 1px solid gray;
+    display: inline-block; 
+    width: 49.5%;
+  }
+  .class_res2 {
+    height: 500px; 
+    border: 1px solid gray; 
+    width: 49.5%;
+    float: right;
+  }
+   .class_res3 {
+    height: 200px; 
+    border: 1px solid gray;
+    display: inline-block; 
+    width: 49.5%;
+  }
+  #overall_rst {
+    height: 500px;
+    width: 100%;
+    border: 1px solid gray;
+  }
+</style>
+
+<div id="hidable_fields">
+  <div>
+  <form id="nexgen_search_frm" method="post">
+    <fieldset>
+      <input type="submit" name="undergrad_ipt" value="Undergraduate" />
+      <input type="submit" name="graduate_ipt" value="Graduate" />
+      <br /><br />
+      <!-- BEGIN loop --> <!-- This will need to iterate insice the joomla syntax for every alphabetical character -->
+      <input type="submit" name="alphabet" value="{loop.LETTER}" />
+      <!-- END loop -->
+    </fieldset>
+  </form> 
+  </div>
+  <div id="nexgen_search_res1" class="class_res">
+  </div>
+  <div id="nexgen_search_res2" class="class_res2">
+  </div>
+  <div id="nexgen_search_res3" class="class_res3">
+  </div>
+</div>
+  <form id="nexgen_search_sbt" method="post">
+    <fieldset>
+      <input type="button" value="Hide" id="hiding_ipt" />
+      <input type="button" id="showing_ipt" value="Show" style="display: none;" />
+      <input type="submit" value="Submit" name="sbt_btn" />
+    </fieldset>
+  </form>
+<div id="overall_rst">
+</div>
