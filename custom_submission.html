@@ -1,27 +1,70 @@
 <!DOCTYPE html>
+<style type="text/css">
+	#business {
+	display: none;
+	}
+	#other {
+	display: none;
+	}
+</style>
+<script type="text/javascript">
+ function custom_getval(sel) {
+
+      if ((sel.value) == 2)
+	{
+
+		document.getElementById('business').style.display = 'block';
+	}
+	if ((sel.value) == 3)
+	{
+		document.getElementById('other').style.display = 'block';
+	}
+	else
+	{
+		document.getElementById('business').style.display = 'none';
+		document.getElementById('other').style.display = 'none';
+	}
+	
+    }
+</script>
+
 <div id="custom_submission_form">
 <!-- just a quick note, we can add or remove any of these fields as needed, or write jquery to optionally hide or display fields that might not be relevant as the user goes through the form (like showing the skills option if the user selects they are type individual) -->
 	<form id="custom_sbt_frm" method="post">
 		<fieldset>
-			Name: <input type="text" name="name" /><br /><br />
-			Career Type: <input type="text" name="career" /><br /><br />
-			Position: <select>
+			Position: <select id="selector" onchange="custom_getval(this);">
 					<option value="1">Individual</option>
-					<option value="2">Commercial Business</option>
-					<option value="3">Government Official</option>
-					<option value="3">Non-Government Organization</option>
+					<option value="2">Business</option>
+					<option value="3">Organization</option>
 				</select><br /><br />
+			Name: <input type="text" name="name" /><br /><br />
+			<div id="individual">
+			Career: <input type="text" name="career" /><br /><br />
 			Age: <input type="text" name="age" /><br /><br />
 			Location: <input type="text" name="location" /><br /><br />
 			Education: <input type="text" name="education" /><br /><br />
 			Work History: <input type="text" name="work_history" /><br /><br />
 			References: <input type="text" name="references" /><br /><br />
+			Location:  <input type="text" name="location" /><br /><br />
+			Email:  <input type="text" name="email" /><br /><br />
+			Phone Number: <input type="text" name="phone" /><br /><br />
 			Skills: <select>
 					<option value="1"></option>
 					<!-- This will loop through all listed skills available in the skills table -->
 				</select>: <input type="text" name="references" /><br /><br />
 			Personal Statement: <input type="text" name="personal" /><br /><br />
-	<input type="submit" name="custom_sbt_frm" value="Submit" />
+			</div>
+			<div id="business">
+			Industry: <input type="text" name="industry" /><br /><br />
+			</div>
+			<div id="other">
+			Title: <input type="text" name="age" /><br /><br />
+			Fax:  <input type="text" name="fax" /><br /><br />
+			Point of Contact: <input type="text" name="contactpoint" /><br /><br />
+			Description Statement: <input type="text" name="personal" /><br/><br />
+			</div>
+	
+			<input type="submit" name="custom_sbt_frm" value="Submit" />
 		</fieldset>
 	</form>
 </div>
