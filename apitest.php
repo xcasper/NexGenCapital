@@ -4,18 +4,31 @@ Testing New API....
 
 <script>
 $( document ).ready( function() {
-	$( "#results" ).load( "https://data.colorado.gov/resource/cdhe-degrees-awarded.json?%24query=select%20programname%20from%20%23q8jr-gbau%20group%20by%20programname" );
-	
+	$( "$btn_submit" ).click( function() {
+		var agemax			= $( "#inp_agemax" ).val();
+		var institutionname	= $( "#inp_institutionname" ).val();
+		var gender			= $( "#inp_gender" ).val();
+		var studentlevel	= $( "#inp_studentlevel" ).val();
+		var programname		= $( "#inp_programname" ).val();
+		
+		$( "#results" ).post( "query.php", {
+			'agemax'			: agemax,
+			'institutionname'	: institutionname,
+			'gender'			: gender,
+			'studentlevel'		: studentlevel,
+			'programname'		: programname
+		});
+	});
 });
 </script>
+
+
 
 <div id="input">
 
 <form>
 
-<select name="programname">
-<option></option>
-</select>
+
 
 </form>
 
