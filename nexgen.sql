@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `team_comments` (
 
 CREATE TABLE IF NOT EXISTS `team_commercial` (
   `user_id` int(255) NOT NULL,
-  `password` int(255) NOT NULL,
+ `standing` int(255) NOT NULL, `password` int(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
