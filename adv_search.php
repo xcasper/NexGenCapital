@@ -1,4 +1,5 @@
-.<!DOCTYPE html>
+<!DOCTYPE html>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -54,14 +55,20 @@ function display( data ) {
 
 </script>
 <style type="text/css">
-  #nexgen_searc_frm input {
+
+	#nexgen_search_frm_container {
+		background: url('./templates/beez4/css/sky.png');
+		
+	}
+
+  #nexgen_search_frm input {
     padding: 0;
     margin: 0px;
   }
   #hidable_fields {
     border: none;
     margin: 0 auto;
-      background: lightblue;
+      background: url('./templates/beez4/css/sky.png');
   }
   #hidable_fields input {
     margin: -3px;
@@ -84,6 +91,8 @@ function display( data ) {
     border: 1px solid gray; 
     width: 49.5%;
     float: right;
+    
+    overflow-x:hidden;
   }
    .class_res3 {
     height: 200px; 
@@ -92,14 +101,14 @@ function display( data ) {
     width: 49.5%;
   }
   #overall_rst {
-    height: 500px;
+    height: 300px;
     width: 100%;
     border: 1px solid gray;
   }
 </style>
 
 <div id="hidable_fields">
-  <div>
+  <div id="nexgen_search_frm_container">
   <form id="nexgen_search_frm" method="post">
     <fieldset>
       <input type="submit" name="undergrad_ipt" value="Undergraduate" />
