@@ -15,23 +15,26 @@ $( document ).ready( function() {
 	
 	$.each( queries, function( key, val ) {
 		console.log( "Query loop: " + val );	
-										
-		var options = [];
+						
 	
-		$.getJSON( val, function( data ) {
+		$.getJSON( val, function( data ) {			
+			var options = "<option value=\"\">Choose..</option>";
 			console.log( data );
+			
 			$.each( data, function( key, val ) {
 //				console.log( key, val );
-				options.push( "<option id='" + key + "'>" + ( !val.gender ? val.year : val.gender ) + "</option>" );
+				options += "<option>" + ( !val.gender ? val.year : val.gender ) + "</option>" ;
 			});
 			console.log( "Options: " + options );
 			
 			var select = $( "<select>", {
 				"class"	: "my-new-list",
-				html	: options.join( "" )
+				"id"	: key,
+				html	: options
 			});
 
 			console.log( "Select: " + select );
+			console.log( select );
 
 			switch( key ) {
 				case 0:
@@ -44,6 +47,16 @@ $( document ).ready( function() {
 					console.log( "Index larger than expected" );
 					break;	
 			}
+			
+			select.change( function() {
+				console.log( "change!" );
+				$( "#nexgen_search_res2" ).load( "Query.php", {
+					"institutionname"	: $( "#inp_institutionname" ).val(),
+					"year"				: $( "select#0 option:selected" ).val(),
+					"gender"			: $( "select#1 option:selected" ).val()
+				});		
+			});
+
 		});
 	});
 });
@@ -63,7 +76,5 @@ $( document ).ready( function() {
 
 <label for="inp_institutionname"> Institution Name: </label>
 <input type="text" name="inp_institutionname" /> <br />
-
-<input type="submit" value="Submit" />
 
 </form>

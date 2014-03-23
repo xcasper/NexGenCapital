@@ -13,6 +13,12 @@
 
 $debug = 0;
 
+if ( $debug ) {
+	echo '<pre>';
+	var_dump( $_REQUEST );
+	echo '</pre>';
+}
+
 if( $debug ) {
 	echo '<br />$debug => '.$debug.'<br />';
 
@@ -35,8 +41,8 @@ if( $debug ) echo '<br />$institutionname => '.$institutionname.'<br />';
 if( isset( $_REQUEST['gender'] ) ) $gender	= $_REQUEST['gender'];
 if( $debug ) echo '<br />$gender => '.$gender.'<br />';
 
-if( isset( $_REQUEST['studentlevel'] ) ) $studentlevel = $_REQUEST['studentlevel'];
-if( $debug ) echo '<br />$studentlevel => '.$studentlevel.'<br />';
+if( isset( $_REQUEST['year'] ) ) $year = $_REQUEST['year'];
+if( $debug ) echo '<br />year => '.$year.'<br />';
 
 if( isset( $_REQUEST['programname'] ) ) $programname = $_REQUEST['programname'];
 if( $debug ) echo '<br />$programname => '.$programname.'<br />';
@@ -44,22 +50,24 @@ if( $debug ) echo '<br />$programname => '.$programname.'<br />';
 if( isset( $_REQUEST['execute'] ) ) $execute = $_REQUEST['execute'];
 if( $debug ) echo '<br />$execute	=> '.$execute.'<br />';
 
-$agemax				= 21;
-$institutionname	= "Pikes Peak Community College";
-$gender				= "Female";
-$studentlevel		= NULL;
-$programname		= "Computer Science";
-$execute			= 1;
+if( $debug ) {
+	$agemax				= 21;
+	$institutionname	= "Pikes Peak Community College";
+	$gender				= "Female";
+	$year				= NULL;
+	$programname		= "Computer Science";
+	$execute			= 1;
+}
 
 $inputs				= [
 	"agemax" 			=> $agemax,
-	"institutionname"	=> $institutionname,
-	"studentlevel"		=> $studentlevel,
+	"gender"			=> $gender,
+	"year"				=> $year,
 	"programname"		=> $programname
 ];
 if( $debug ) echo '<br />$inputs => '.print_r( $inputs ).'<br />';
 
-unset( $agemax, $institutionname, $gender, $studentlevel, $programname );
+unset( $agemax, $institutionname, $gender, $year, $programname );
 
 $keys		= array();
 $values		= array();
@@ -126,6 +134,11 @@ if( $debug ) echo '<br />$query => '.$query.'<br />';
 
 if( $debug ) echo '<br />Start view: <br />';
 if( $debug ) echo '<br />$inputs => '.print_r( $inputs ).'<br />';
+
+if( count( $inputs ) < 1 ) {
+	echo 'No Data';
+	exit();
+}
 
 foreach( $inputs as $key => $value ) {
 	echo '<p>Search for '.$key.' that matches '.$value.'</p>';
