@@ -11,7 +11,7 @@
 
 //	Debug	***********************************************************************************
 
-$debug = 1;
+$debug = 0;
 
 if( $debug ) {
 	echo '<br />$debug => '.$debug.'<br />';
@@ -38,15 +38,18 @@ if( $debug ) echo '<br />$gender => '.$gender.'<br />';
 if( isset( $_REQUEST['studentlevel'] ) ) $studentlevel = $_REQUEST['studentlevel'];
 if( $debug ) echo '<br />$studentlevel => '.$studentlevel.'<br />';
 
-if( isset( $_REQUEST['prgramname'] ) ) $programname	= $_REQUEST['programname'];
+if( isset( $_REQUEST['programname'] ) ) $programname = $_REQUEST['programname'];
 if( $debug ) echo '<br />$programname => '.$programname.'<br />';
 
-$agemax				= 17;
-$institutionname	= NULL;
+if( isset( $_REQUEST['execute'] ) ) $execute = $_REQUEST['execute'];
+if( $debug ) echo '<br />$execute	=> '.$execute.'<br />';
+
+$agemax				= 21;
+$institutionname	= "Pikes Peak Community College";
 $gender				= "Female";
 $studentlevel		= NULL;
 $programname		= "Computer Science";
-
+$execute			= 1;
 
 $inputs				= [
 	"agemax" 			=> $agemax,
@@ -81,39 +84,29 @@ unset( $key, $value );
 
 $select	= "SELECT ";
 
-for( $i = 1; $i < count( $inputs ); $i++ ) {
-if( $debug ) echo '<br />$i => '.$i.'<br />';
-if( $debug ) echo '<br />count( $keys ) => '.count( $keys ).'<br />';
-	
-	switch( count( $inputs ) ) {
-		case 0:
-			if( $debug ) echo '<br />Case 0: <br />';
-			$select	.= '* ';
-			break;
-		case 1:
-			if( $debug ) echo '<br />Case 1: <br />';
-			$select	.= $keys;
-			$where	= "where ".$keys[$i]."='".$values[$i]."'";
-			break;
-		default: 
-			if( $debug ) echo '<br />Case Default: <br />';
-			
-			$where = "WHERE ";
-			
-			foreach( $inputs as $key => $value ) {
-				if( $debug ) echo '<br />$key => '.$key.'<br />';
-				$value	= urlencode( $value );
-				$select	.= $key.', ';	
-				$where	.= $key."='".$value."' AND ";
-			}
-			
-			$where	= trim( $where, 'AND ' );
-			
-			break;
-	}
-	
-}
+if( $debug ) echo '<br />count( $inputs ) => '.count( $inputs ).'<br />';
 
+switch( count( $inputs ) ) {
+	case 0:
+		if( $debug ) echo '<br />Case 0: <br />';
+		$select	.= '* ';
+		break;
+	default: 
+		if( $debug ) echo '<br />Case Default: <br />';
+			
+		$where = "WHERE ";
+			
+		foreach( $inputs as $key => $value ) {
+			if( $debug ) echo '<br />$key => '.$key.'<br />';
+			$select	.= $key.', ';	
+			$where	.= $key."='".$value."' AND ";
+		}
+			
+		$where	= trim( $where, 'AND ' );
+			
+		break;
+}
+	
 //	Strip unnecessary content	***************************************************************
 
 if( $debug ) echo '<br />Strip extraneous strings...<br />';
@@ -123,6 +116,10 @@ if( $debug ) echo '<br />$select => '.$select.'<br />';
 $query	= $select.' FROM #q8jr-gbau ';
 
 if( isset( $where ) ) $query.= $where;
+if( $debug ) echo '<br />$query => '.$query.'<br />';
+
+//$query	= str_replace( ' ', '%20', $query );
+$query	= urlencode( $query );
 if( $debug ) echo '<br />$query => '.$query.'<br />';
 
 //	View	***********************************************************************************
@@ -136,7 +133,7 @@ foreach( $inputs as $key => $value ) {
 
 //	Execute Search	***************************************************************************
 
-nexgen_execute_search( $query );
+if( $execute ) nexgen_execute_search( $query );
 
 function nexgen_execute_search( $query ) {
 	//	Debug	*******************************************************************************
@@ -149,11 +146,8 @@ function nexgen_execute_search( $query ) {
 		var query	= "<?=$query?>";
 		console.log( query );
 	
-		$( "#results" ).load( "https://data.colorado.gov/resource/cdhe-degrees-awarded.json?query=" + query, function( data ) {
+		$( "#results" ).load( "https://data.colorado.gov/resource/cdhe-degrees-awarded.json?$query=" + query, function( data ) {
 			console.log( data );
-			if( data == '' ) {
-				printf( "Returned no results." );
-			}	
 		});
 	});
 	</script>	

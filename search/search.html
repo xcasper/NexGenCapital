@@ -1,14 +1,59 @@
+<script>
+$( document ).ready( function() {
+
+	var field 	= [ "year", "gender" ];
+	var query 	= [];
+	var options = [];
+	
+	$.each( field, function ( key, val ) {
+		query.push( "https://data.colorado.gov/resource/cdhe-degrees-awarded.json?%24query=select%20"
+			+ val + "%20from%20%23q8jr-gbau%20group%20by%20"
+			+ val );		
+	});
+	
+	$.each( query, function( key, val ) {
+//		console.log( val );	
+		$.getJSON( val, function( data ) {
+//			console.log( data );
+			var items =[];
+			$.each( data, function( key, val ) {
+//				console.log( key, val );
+				items.push( "<option id='" + key + "'>" + val.year + "</option>" );
+			});
+//			console.log( items );
+
+			var select = $( "<select>", {
+					"class"	: "my-new-list",
+					html	: items.join( "" )
+				});
+
+			console.log( select );
+			options.push( select );
+		});
+		console.log( options );
+
+	});
+	
+	$.each( options, function( key, val ) {
+		console.log( "options loop" );
+	});
+});
+</script>
+
 <form>
 
-<label for ="inp_year"> Year: </label><input type="text" name="inp_year" /> <br />
+<div id="inp_year">
+	<label for="inp_year"> Year: </label>
 
-<label for="inp_institutionname"> Institution Name: </label><input type="text" name="inp_institutionname" /> <br />
+</div> <br />
 
-<label for="inp_gender"> Gender: </label><input type="text" name="inp_gender" /> <br />
+<div id="inp_gender">
+	<label for="inp_gender"> Gender: </label>
 
-<label for="inp_studentlevel"> Student Level: </label><input type="text" name="inp_studentlevel" /> <br />
+</div> <br />
 
-<label for="inp_programname"> Program Name: </label><input type="text" name="inp_programname" /> <br />
+<label for="inp_institutionname"> Institution Name: </label>
+<input type="text" name="inp_institutionname" /> <br />
 
 <input type="submit" value="Submit" />
 
