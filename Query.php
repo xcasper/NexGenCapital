@@ -20,6 +20,10 @@ if( $debug ) {
 	ini_set("display_errors", 1);
 }
 
+//	Includes	*******************************************************************************
+?>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<?
 //	Inputs	***********************************************************************************
 
 if( isset( $_REQUEST['agemax'] ) ) $agemax = $_REQUEST['agemax'];
@@ -77,7 +81,7 @@ unset( $key, $value );
 
 $select	= "SELECT ";
 
-for( $i = 1; $i < count( $keys ); $i++ ) {
+for( $i = 1; $i < count( $inputs ); $i++ ) {
 if( $debug ) echo '<br />$i => '.$i.'<br />';
 if( $debug ) echo '<br />count( $keys ) => '.count( $keys ).'<br />';
 	
@@ -98,6 +102,7 @@ if( $debug ) echo '<br />count( $keys ) => '.count( $keys ).'<br />';
 			
 			foreach( $inputs as $key => $value ) {
 				if( $debug ) echo '<br />$key => '.$key.'<br />';
+				$value	= urlencode( $value );
 				$select	.= $key.', ';	
 				$where	.= $key."='".$value."' AND ";
 			}
@@ -120,8 +125,39 @@ $query	= $select.' FROM #q8jr-gbau ';
 if( isset( $where ) ) $query.= $where;
 if( $debug ) echo '<br />$query => '.$query.'<br />';
 
+//	View	***********************************************************************************
 
-//	Sanitize Inputs ***************************************************************************
+if( $debug ) echo '<br />Start view: <br />';
+if( $debug ) echo '<br />$inputs => '.print_r( $inputs ).'<br />';
 
-/*
+foreach( $inputs as $key => $value ) {
+	echo '<p>Search for '.$key.' that matches '.$value.'</p>';
+}
+
+//	Execute Search	***************************************************************************
+
+nexgen_execute_search( $query );
+
+function nexgen_execute_search( $query ) {
+	//	Debug	*******************************************************************************
+	
+	$debug = 1;
+	if( $debug ) echo '<br />Start execute_search function: <br />';
 ?>
+	<script>
+	$( document ).ready( function() {
+		var query	= "<?=$query?>";
+		console.log( query );
+	
+		$( "#results" ).load( "https://data.colorado.gov/resource/cdhe-degrees-awarded.json?query=" + query, function( data ) {
+			console.log( data );
+			if( data == '' ) {
+				printf( "Returned no results." );
+			}	
+		});
+	});
+	</script>	
+<?}?>
+
+<div id="results">
+</div>
