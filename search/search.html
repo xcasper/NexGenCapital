@@ -1,11 +1,9 @@
 <script>
 $( document ).ready( function() {
-
+	
 	var fields 	= [ "year", "gender" ];
 	var queries	= [];
 	var drops	= [];
-	var options = [];
-	var select;
 	
 	$.each( fields, function ( key, val ) {
 		queries.push( "https://data.colorado.gov/resource/cdhe-degrees-awarded.json?%24query=select%20"
@@ -13,46 +11,40 @@ $( document ).ready( function() {
 			+ val );		
 	});
 	
+	console.log( "Queries: " + queries );
+	
 	$.each( queries, function( key, val ) {
-//		console.log( val );	
-					
+		console.log( "Query loop: " + val );	
+										
+		var options = [];
+	
 		$.getJSON( val, function( data ) {
-//			console.log( data );
+			console.log( data );
 			$.each( data, function( key, val ) {
 //				console.log( key, val );
-				options.push( "<option id='" + key + "'>" + val.year + "</option>" );
+				options.push( "<option id='" + key + "'>" + ( !val.gender ? val.year : val.gender ) + "</option>" );
 			});
-//			console.log( items );
-
-		});
-
-		console.log( options );
-
-		select = $( "<select>", {
+			console.log( "Options: " + options );
+			
+			var select = $( "<select>", {
 				"class"	: "my-new-list",
 				html	: options.join( "" )
-		});
-		console.log( select );
+			});
 
-		drops.push( select );
-		console.log( drops );
-	});
-	
-	console.log( options );
-	
-	$.each( drops, function( key, val ) {
-		console.log( "options loop", key, val );
-		switch( key ) {
-			case 0:
-				val.appendTo( "#inp_year" );
-				break;
-			case 1:
-				val.appendTo( "#inp_gender" );
-				break;
-			default:
-				console.log( "Index larger than expected" );
-				break;	
-		}
+			console.log( "Select: " + select );
+
+			switch( key ) {
+				case 0:
+					select.appendTo( "#inp_year" );
+					break;
+				case 1:
+					select.appendTo( "#inp_gender" );
+					break;
+				default:
+					console.log( "Index larger than expected" );
+					break;	
+			}
+		});
 	});
 });
 </script>
