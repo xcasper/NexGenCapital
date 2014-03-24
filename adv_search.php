@@ -68,34 +68,36 @@ function display( data ) {
   #hidable_fields {
     border: none;
     margin: 0 auto;
+	padding: 3px;
       background: url('./templates/beez4/css/sky.png');
   }
   #hidable_fields input {
     margin: -3px;
   }
   #nexgen_search_frm {
-    width: 215px;
-    margin: 0 auto;
+   
   }
   .class_res {
     height: 300px; 
     border: 1px solid gray;
     display: inline-block; 
     width: 49.5%;
-    
+    padding: 5px;
     overflow-x:scroll;
  
   }
+
   .class_res2 {
     height: 500px; 
     border: 1px solid gray; 
-    width: 49.5%;
+    width: 49%;
     float: right;
     
     overflow-x:hidden;
   }
    .class_res3 {
-    height: 200px; 
+    height: 120px; 
+	padding: 3px;
     border: 1px solid gray;
     display: inline-block; 
     width: 49.5%;
@@ -105,21 +107,28 @@ function display( data ) {
     width: 100%;
     border: 1px solid gray;
   }
+  #alphabet {
+ 	margin: 0 auto;
+	width: 1000px;
+	}
 </style>
 
 <div id="hidable_fields">
   <div id="nexgen_search_frm_container">
   <form id="nexgen_search_frm" method="post">
     <fieldset>
-      <input type="submit" name="undergrad_ipt" value="Undergraduate" />
+	<!-- I am commenting these out because currently they do nothing -->
+      <!--<input type="submit" name="undergrad_ipt" value="Undergraduate" />
       <input type="submit" name="graduate_ipt" value="Graduate" />
-      <br /><br />
-  	<?
+      <br /><br />-->
+	<div id="alphabet">
+  	<?php
 	$base = 65;
 	for($iteration=0; $iteration < 26; $iteration++){
-      	echo '<input type="button" onclick="display('.($base+$iteration).')" id="'.$iteration.'" value="&#'.($base+$iteration).'"/>';
+      	echo '<input type="button" onclick="display('.($base+$iteration).')" id="'.$iteration.'" value="&#'.($base+$iteration).'" style="padding: 1px; margin: 1px;" />';
 	}
 	?>
+	</div>
     </fieldset>
   </form> 
   </div>
@@ -132,10 +141,10 @@ function display( data ) {
 </div>
   <form id="nexgen_search_sbt">
     <fieldset>
-      <input type="button" value="Hide" id="hiding_ipt" />
+	<!-- commenting this out because it seems pointless? -->
+      <!-- <input type="button" value="Hide" id="hiding_ipt" /> -->
       <input type="button" id="showing_ipt" value="Show" style="display: none;" />
       <button value="Submit" id="btn_submit" name="sbt_btn">Submit</button>
     </fieldset>
   </form>
-<div id="overall_rst">
-</div>
+
